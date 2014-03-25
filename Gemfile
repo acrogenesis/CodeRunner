@@ -32,6 +32,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'ace-rails-ap'
+gem 'foundation-rails'
+gem 'autosize-rails'
+
+group :development do
+	gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
