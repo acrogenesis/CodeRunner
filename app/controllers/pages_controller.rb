@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  def index
-
-  end
+  # def index
+  #   @code = Code.new
+  #   render 'codes/index'
+  # end
 end

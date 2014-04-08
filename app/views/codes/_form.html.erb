@@ -1,0 +1,19 @@
+<%= form_for @code do |f| %>
+  <%= f.hidden_field :codigo %>
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Entrada
+        <%= f.text_area :entrada %>
+      </h3>
+    </div>
+  </div>
+
+  <div class="row collapse">
+    <div class="small-8 columns">
+      <%= f.text_field :titulo, placeholder: "Titulo de Código", required: true  %>
+    </div>
+    <div class="small-4 columns">
+      <%= f.button "Guardar", class: "button postfix" %>
+    </div>
+  </div>
+<% end %>

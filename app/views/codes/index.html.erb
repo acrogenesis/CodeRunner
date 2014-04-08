@@ -1,0 +1,22 @@
+<div class="row full">
+  <div class="small-7 columns full">
+    <div id="editor"><%= "#include <iostream>
+
+using namespace std;
+int main() {
+
+  return 0;
+}" %></div>
+  </div>
+  <div class="small-5 columns">
+    <%= render 'form' %>
+    <div class="row">
+      <div class="large-12 columns">
+        <h3>Salida
+          <textarea></textarea>
+        </h3>
+      </div>
+      <button type="submit" class="button success right">Correr</button>
+    </div>
+  </div>
+</div>
