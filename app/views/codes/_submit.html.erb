@@ -1,0 +1,8 @@
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Salida
+        <textarea id="output" name="output"></textarea>
+      </h3>
+    </div>
+    <%= link_to "Correr", "/codes/submit/#{@code.id}", class: "button success right", remote: true %>
+  </div>

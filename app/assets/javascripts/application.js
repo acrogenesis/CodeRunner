@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ace/ace
+//= require ace/theme-xcode
+//= require ace/mode-c_cpp
+//= require jquery.autosize
+//= require foundation
 //= require turbolinks
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
