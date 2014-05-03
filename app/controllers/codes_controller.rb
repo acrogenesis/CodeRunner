@@ -28,6 +28,14 @@ class CodesController < ApplicationController
     end
   end
 
+  def submit
+    @code = Code.find(params[:id])
+    @output = @code.submit
+    respond_to do |f|
+      f.js
+    end
+  end
+
   private
 
   def set_code
