@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
-require 'Open3'
 
 gem 'rails_12factor'
 
