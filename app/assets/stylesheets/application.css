@@ -10,6 +10,9 @@
  *
  *= require_self
  *= require foundation_and_overrides
+ *= require chosen
+ *= require font-awesome
+ *= require dataTables/jquery.dataTables.foundation
 
  *= require_tree .
  */

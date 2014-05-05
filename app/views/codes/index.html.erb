@@ -1,14 +1,36 @@
-<div class="row full">
-  <div class="small-7 columns full">
-    <div id="editor"><%= "#include <iostream>
-
-using namespace std;
-int main() {
-
-  return 0;
-}" %></div>
+<div class="row">
+  <div class="small-12 columns">
+    <h2>Codigos</h2>
   </div>
-  <div class="small-5 columns">
-    <%= render 'form' %>
+  <div class="small-12 columns">
+    <%= link_to new_code_path do %> <%= fa_icon 'plus' %>  Agregar un nuevo código<%end%>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <table class='datatable'>
+      <thead>
+        <th>Título</th>
+        <th>Categoría</th>
+        <th>Lenguaje</th>
+        <th>Opciones</th>
+      </thead>
+      <tbody>
+        <% @codes.each do |code| %>
+          <tr>
+            <td><%= code.titulo %></td>
+            <td><%= code.category %></td>
+            <td>C++</td>
+            <td>
+              <div class="opciones_tabla">
+              <%= link_to "#{ fa_icon 'pencil'} Editar".html_safe, edit_code_path(code), :class=>"button small" %>
+              <%= link_to "#{ fa_icon 'trash-o'} Eliminar".html_safe, code_path(code), :method=>"delete", :confirm=>"¿Estas seguro que quieres eliminar este código?", :class=>"button small alert"%>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>

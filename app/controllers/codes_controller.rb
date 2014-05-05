@@ -3,6 +3,10 @@ class CodesController < ApplicationController
   before_action :set_code, only: [:update]
 
   def index
+    @codes = Code.all
+  end
+
+  def new
     @code = Code.new
   end
 
@@ -43,6 +47,6 @@ class CodesController < ApplicationController
   end
 
   def code_params
-    params.require(:code).permit(:id, :titulo, :entrada, :codigo)
+    params.require(:code).permit(:id, :titulo, :entrada, :codigo, :category)
   end
 end
