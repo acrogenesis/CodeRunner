@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'Open3'
 class Code < ActiveRecord::Base
   validates_uniqueness_of :titulo
