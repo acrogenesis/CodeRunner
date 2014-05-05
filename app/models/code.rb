@@ -11,7 +11,7 @@ class Code < ActiveRecord::Base
 
     if stderr_str
       remove_files
-      stderr_str.html_safe
+      stderr_str
     else
       out = `./a.out < in.txt`
       remove_files
