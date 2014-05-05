@@ -1,18 +1,19 @@
-postgresql: &postgresql
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
   adapter: postgresql
+  database: coderunner_production
   host: localhost
   min_messages: ERROR
   pool: 5
   timeout: 5000
-
-development:
-  <<: *postgresql
-  database: coderunner_development
-
-test:
-  <<: *postgresql
-  database: coderunner_test
-
-production:
-  <<: *postgresql
-  database: coderunner_production
