@@ -10,7 +10,7 @@ gem 'rails', '4.1.0'
 group :production do
   gem 'pg'
 end
-gem 'sqlite3'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -42,7 +42,11 @@ gem 'ace-rails-ap'
 gem 'foundation-rails'
 gem 'autosize-rails'
 
+group :test do
+  gem 'sqlite3'
+end
 group :development do
+  gem 'sqlite3'
 	gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
