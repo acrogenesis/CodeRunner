@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-require 'Open3'
 class Code < ActiveRecord::Base
   validates_uniqueness_of :titulo
   validates_presence_of :titulo, :codigo
@@ -10,7 +8,7 @@ class Code < ActiveRecord::Base
 
     stdout_str, stderr_str, status = Open3.capture3("g++ codigo.cpp -o a.out")
 
-    if stderr_str
+    if !stderr_str.empty?
       remove_files
       stderr_str
     else
